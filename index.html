@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cain Africa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+    <!-- HEADER -->
+  <header>
+    <div class="logo">CAIN-Africa<span>.</span></div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="cta">Get Started</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="#home" onclick="closeMenu()">Home</a></li>
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#contact" class="cta" onclick="closeMenu()">Get Started</a></li>
+    </ul>
+  </div>
+  <!-- HERO -->
+  <section id="home" class="hero" aria-label="Hero section">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Est. 2008 &middot; Trusted Worldwide</p>
+      <h1>Building a <em>Better</em> Future Together</h1>
+      <p class="hero-desc">We partner with organizations around the globe to drive meaningful impact, foster sustainable growth, and empower communities through innovation and purpose-led strategy.</p>
+      <div class="btn-group">
+        <a href="#about" class="btn-primary">Our Story</a>
+        <a href="#contact" class="btn-secondary">Work With Us</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-visual-inner">
+        <div class="hero-stat-grid">
+          <div class="stat-box"><span class="num">200+</span><span class="label">Global Partners</span></div>
+          <div class="stat-box"><span class="num">18yr</span><span class="label">Of Excellence</span></div>
+          <div class="stat-box"><span class="num">95%</span><span class="label">Client Retention</span></div>
+          <div class="stat-box"><span class="num">50+</span><span class="label">Countries Served</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ABOUT -->
+  <section id="about" aria-labelledby="about-heading">
+    <span class="section-tag">About Us</span>
+    <div class="about-grid">
+      <div class="about-left">
+        <h2 id="about-heading" class="about-title">Purpose-Driven.<br><span>People First.</span></h2>
+      </div>
+      <div class="about-content">
+        <p>Founded in 2008, We are an international organization committed to advancing sustainable development across sectors. We work at the intersection of strategy, community, and innovation &mdash; partnering with governments, enterprises, and nonprofits to create lasting change.</p>
+        <p>Our multidisciplinary team of over 300 professionals brings deep expertise across public policy, technology, finance, and social impact. We believe the best solutions emerge when diverse perspectives unite around a shared mission.</p>
+        <div class="values">
+          <div class="value-card">
+            <h4>Integrity</h4>
+            <p>We hold ourselves to the highest ethical standards in every decision and engagement.</p>
+          </div>
+          <div class="value-card">
+            <h4>Innovation</h4>
+            <p>We challenge convention and embrace new approaches to solve complex problems.</p>
+          </div>
+          <div class="value-card">
+            <h4>Inclusion</h4>
+            <p>We champion equity and ensure all voices are heard and valued in our work.</p>
+          </div>
+          <div class="value-card">
+            <h4>Impact</h4>
+            <p>Every initiative is measured against the real-world difference it creates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" aria-label="Site footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Cain-Africa<span>.</span></div>
+        <p>Advancing sustainable development and meaningful impact across the globe since 2008.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Organization</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#">Strategy</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Partnerships</a></li>
+          <li><a href="#">Advocacy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="#">info@cain-africa.org</a></li>
+          <li><a href="#">+234 1234567890</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Cain-Africa Organization. All rights reserved.</span>
+      <span>Privacy Policy &middot; Terms of Use</span>
+    </div>
+  </footer> 
+  <script>
+    const btn = document.getElementById('hamburger');
+    const nav = document.getElementById('mobileNav');
+
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('visible');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open);
+    });
+
+    function closeMenu() {
+      nav.classList.remove('visible');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  </script>  
+</body>
+</html>
